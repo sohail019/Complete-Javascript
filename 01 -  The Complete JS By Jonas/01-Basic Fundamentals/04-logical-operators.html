@@ -1,0 +1,199 @@
+// *****************************************************************
+console.log(`****Practice Example 1****`);
+/* Challenge 1: Online Shop Discount
+                    Write code that checks whether a customer is eligible for a discount based on their total purchase amount and membership status. Assume the following inputs:
+                    const totalPurchaseAmount = 150;
+                    const isMember = true;
+                    Output:
+                    1) If the total purchase amount is greater than or equal to 100 and the customer is a member, display: "You are eligible for a 10% discount."
+                    2) If the total purchase amount is greater than or equal to 100, but the customer is not a member, display: "You are not eligible for a discount."
+                    3) If the total purchase amount is less than 100, display: "You need to purchase items worth at least $100 to be eligible for a discount." */
+
+const customerName = "Sohail";
+const totalPurchaseAmount = 10;
+const isMember = true;
+
+if (totalPurchaseAmount >= 100 && isMember) {
+  console.log(`${customerName} is eligible for a 10% discount!`);
+} else if (totalPurchaseAmount >= 100 && !isMember) {
+  console.log(`${customerName} is not eligible for a discount.`);
+} else if (totalPurchaseAmount < 100) {
+  console.log(
+    `${customerName} need to purchase items worth at least $100 to be eligible for a discount.`
+  );
+}
+// *****************************************************************
+console.log(`****Practice Example 2****`);
+/* Challenge 2: Ticket Validation
+            Write code that checks whether a ticket is valid based on the ticket type and the time of entry. Assume the following inputs:
+            const ticketType = "standard";
+            const entryTime = "19:30";
+
+            Output:
+            If the ticket type is "standard" and the entry time is between 18:00 and 20:00, display: "Ticket is valid."For any other ticket type or entry time, display: "Ticket is not valid." */
+
+const ticketType = "standard";
+const entryTime = "17:30";
+
+if (
+  ticketType === "standard" &&
+  entryTime >= "18:00" &&
+  entryTime <= "20:00"
+) {
+  console.log(`Ticket is valid`);
+} else {
+  console.log("Ticket is not valid");
+}
+// *****************************************************************
+console.log(`****Practice Example 3****`);
+/* Assessment:
+            Write code that determines whether a student has passed an exam based on their scores in two subjects. Assume the following inputs:
+            const subject1Score = 85;
+            const subject2Score = 75;
+
+            Output:
+            If the score in both subjects is greater than or equal to 80, display: "Congratulations! You have passed the exam."
+            If the score in at least one subject is less than 80, display: "Sorry, you have failed the exam." */
+
+const subject1Score = 79;
+const subject2Score = 80;
+
+if (subject1Score >= 80 && subject2Score >= 80) {
+  console.log("Congratulations! You have passed the exam.");
+} else if (subject1Score < 80 || subject2Score < 80) {
+  console.log("Sorry, you have failed the exam.");
+}
+// *****************************************************************
+console.log(`****Practice Example 4****`);
+
+/* Challenge 4: User Authentication
+            Write code that prompts the user for a username and password, and checks if the entered credentials are valid. Assume the following inputs:
+            const username = prompt("Enter your username:");
+            const password = prompt("Enter your password:");
+
+            Output:
+            If the username is "admin" and the password is "password123", display: "Authentication successful!"
+            For any other combination of username and password, display: "Authentication failed!" */
+// const username = prompt("ENter your Username:");
+// const password = prompt("Enter you password");
+const username = "admin";
+const password = "password123";
+if (username === "admin" && password === "password123") {
+  console.log("Authentication Successful");
+} else {
+  console.log("Authentication Failed!");
+}
+// *****************************************************************
+console.log(`****Practice Example 5****`);
+/* Challenge 5: Eligibility Check
+            Write code that prompts the user for their age and citizenship status, and determines if they are eligible to vote. Assume the following inputs:
+            const age = parseInt(prompt("Enter your age:"));
+            const isCitizen = confirm("Are you a citizen?");
+
+            Output:
+            If the user is at least 18 years old and a citizen, display: "You are eligible to vote."
+            If the user is below 18 years old, display: "You must be at least 18 years old to vote."
+            If the user is not a citizen, display: "Only citizens are eligible to vote." */
+
+// const age = parseInt(prompt("Enter your age"));
+// console.log(age, typeof age);
+// const isCitizen = confirm("Are you citizen?");
+// console.log(isCitizen);
+
+const age = 6;
+let yearsRemainToVote = 18 - age;
+const isCitizen = true;
+if (age >= 18 && isCitizen) {
+  console.log("You are eligible to vote");
+} else if (age < 18) {
+  console.log(
+    `You must be at least 18 years old to vote. wait ${yearsRemainToVote} more years to Vote `
+  );
+} else if (!isCitizen) {
+  console.log("Only citizens are eligible to vote");
+}
+// *****************************************************************
+console.log(`****Practice Example 6****`);
+/* Challenge 6: Game Access
+      Write code that determines if a player can access a game based on their age and parental consent. Assume the following inputs:
+      const age = parseInt(prompt("Enter your age:"));
+      const hasParentalConsent = confirm("Do you have parental consent?");
+      Output:
+      If the player is at least 18 years old, display: "You can access the game."
+      If the player is below 18 years old but has parental consent, display: "You can access the game with parental consent."
+      If the player is below 18 years old and doesn't have parental consent, display: "You are not allowed to access the game." */
+
+const ageToAccess = 5;
+const hasParentalConsent = false;
+
+if (ageToAccess >= 18) {
+  console.log("You can access the game");
+} else if (ageToAccess < 18 && hasParentalConsent) {
+  console.log("You can access the game with parental consent");
+} else {
+  console.log("You are not allowed to access the game.");
+}
+// *****************************************************************
+console.log(`****Practice Example 7****`);
+/* Challenge 1: Ticket Pricing
+Write code that determines the ticket price based on the age and membership status of a customer. Assume the following inputs:
+const age = 25;
+const isMember = true;
+
+Output:
+If the customer is a member, display: "Ticket price: $10"
+If the customer is not a member and their age is below 18, display: "Ticket price: $5"
+If the customer is not a member and their age is 18 or above, display: "Ticket price: $15" */
+
+const ageCustomer = 25;
+const isMemberForTicket = false;
+
+if (isMemberForTicket) {
+  console.log("Ticket price: $10");
+} else if (!isMemberForTicket && ageCustomer < 18) {
+  console.log("Ticket price: $5");
+} else if (!isMemberForTicket && ageCustomer >= 18) {
+  console.log("Ticket price: $15");
+}
+
+// *****************************************************************
+console.log(`****Practice Example 7****`);
+/* Write code that checks if a credit card number is valid based on its length and the prefix. Assume the following input:
+const creditCardNumber = "4532015112893704";
+Output:
+
+If the credit card number starts with "4" and has a length of 16 digits, display: "Valid credit card number."
+For any other credit card number, display: "Invalid credit card number." */
+
+const creditCardNumber = "4532015112893704";
+
+if (creditCardNumber.startsWith("4") && creditCardNumber.length === 16) {
+  console.log(`Valid credit card number: ${creditCardNumber} `);
+} else if (!creditCardNumber.startsWith("4")) {
+  console.log(`Enter Credit Card Number That Starts With 4`);
+} else if (creditCardNumber.length !== 16) {
+  console.log("Enter 16 Digits Number");
+} else {
+  console.log(`Invalid credit card number.  `);
+}
+
+// Logic for week
+
+// let day = prompt("Enter The Day");
+// day = day.toLowerCase(day);
+
+const day = "monday";
+if (day == "monday") {
+  console.log("Plan course structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("Record Videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend :D");
+} else {
+  console.log("Not a valid Day");
+}

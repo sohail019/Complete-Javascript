@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Switch Statements</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+      a {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Switch Statements</h1>
+    <br /><br />
+    <a href="../practice each topics/">Practice</a>
+    <a href="../projects/">Project</a>
+    <br /><br />
+    <a href="../index.html">Home</a>
+    <a href="../assignments.html">Assignments</a>
+
+    <script>
+      // *****************************************************************
+      console.log(`****Practice Example 1****`);
+
+      /* Challenge 1: Season of the Year
+            Write a program that takes a month as input (e.g., "January") and outputs the corresponding season ("Winter", "Spring", "Summer", or "Autumn").
+
+            Input:const month = "March";
+            Output: Season: Spring;
+             */
+
+      //   let month = prompt("Enter the month");
+      //   month = month.toLowerCase(month);
+
+      const month = "january";
+      switch (month) {
+        case "december":
+        case "january":
+        case "february":
+          console.log("Winter");
+          break;
+        case "march":
+        case "april":
+        case "may":
+          console.log("Spring");
+          break;
+        case "june":
+        case "july":
+        case "august":
+          console.log("Summer");
+          break;
+        case "september":
+        case "october":
+        case "november":
+          console.log("Autumn");
+          break;
+
+        default:
+          console.log("Invalid month");
+      }
+
+      // *****************************************************************
+      console.log(`****Practice Example 2****`);
+
+      /* Challenge 2: Day Name
+            Write a program that takes a number from 1 to 7 as input and outputs the corresponding day of the week ("Sunday", "Monday", etc.).
+
+            Input:const dayNumber = 3;
+            Output: Day: Wednesday*/
+
+      const dayNumber = 5;
+
+      switch (dayNumber) {
+        case 1:
+          console.log("Monday");
+          break;
+        case 2:
+          console.log("Tuesday");
+          break;
+        case 3:
+          console.log("Wednesday");
+          break;
+        case 4:
+          console.log("Thursday");
+          break;
+        case 5:
+          console.log("Friday");
+          break;
+        case 6:
+          console.log("Saturday");
+          break;
+        case 7:
+          console.log("Sunday");
+          break;
+
+        default:
+          console.log("Invalid Day Number");
+      }
+      // *****************************************************************
+      console.log(`****Practice Example 3****`);
+
+      /* Challenge 3: Product Category
+      Write a program that takes a product code as input and outputs the corresponding category ("Electronics", "Clothing", "Home", or "Miscellaneous").
+
+      Input: const productCode = "A120";
+      Output: Category: Electronics*/
+
+      const productCode = "A120";
+
+      switch (productCode) {
+        case "A120":
+          console.log("Electronics");
+          break;
+        case "A121":
+          console.log("Clothing");
+          break;
+        case "A122":
+          console.log("Home");
+          break;
+        case "A123":
+          console.log("Miscellaneous");
+          break;
+
+        default:
+          console.log("invalid code");
+      }
+      // *****************************************************************
+      console.log(`****Practice Example 4****`);
+
+      /* Challenge 4: Language Selection
+      Write a program that takes a language code as input and outputs the corresponding language name ("English", "French", "Spanish", or "German").
+
+      Input: const languageCode = "fr";
+      Output:Language: French */
+
+      const languageCode = "fr";
+      switch (languageCode) {
+        case "fr":
+          console.log("French");
+          break;
+        case "sp":
+          console.log("Spanish");
+          break;
+        case "en":
+          console.log("English");
+          break;
+        case "gr":
+          console.log("German");
+          break;
+
+        default:
+          break;
+      }
+      // *****************************************************************
+      console.log(`****Practice Example 5****`);
+
+      /* Challenge 5: School Grade
+      Write a program that takes a numeric grade as input and outputs the corresponding letter grade ("A", "B", "C", "D", or "F").
+
+      Input: const grade = 78;
+      Output: Letter Grade: C */
+
+      const grade = 50;
+
+      switch (true) {
+        case grade >= 90:
+          console.log("A");
+          break;
+        case grade >= 80 && grade < 90:
+          console.log("B");
+          break;
+        case grade >= 70 && grade < 80:
+          console.log("C");
+          break;
+        case grade >= 60 && grade < 70:
+          console.log("D");
+          break;
+        case grade < 60:
+          console.log("F");
+      }
+      // *****************************************************************
+      console.log(`****Practice Example 6****`);
+
+      const bill = 40;
+
+      /* Write your code below. Good luck! 🙂 */
+
+      const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+      console.log(
+        `The bill was ${bill}, the tip was ${tip}, and the total value ${
+          bill + tip
+        }. `
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ternary Operators</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+      a {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ternary Operators</h1>
+    <br /><br />
+    <a href="../practice each topics/">Practice</a>
+    <a href="../projects/">Project</a>
+    <br /><br />
+    <a href="../index.html">Home</a>
+    <a href="../assignments.html">Assignments</a>
+
+    <script>
+      // *****************************************************************
+      console.log(`****Practice Example 1****`);
+
+      /* Challenge 1: Grade Calculation
+            Write a program that takes a student's score as input and determines their grade based on the following criteria:
+
+            If the score is greater than or equal to 90, the grade is "A".
+            If the score is between 80 and 89, the grade is "B".
+            If the score is between 70 and 79, the grade is "C".
+            If the score is between 60 and 69, the grade is "D".
+            If the score is less than 60, the grade is "F".
+            Input:
+            Score: 85
+
+            Output:
+            Grade: B */
+
+      const score = 50;
+      const grade =
+        score >= 90
+          ? "A"
+          : score >= 80 && score < 90
+          ? "B"
+          : score >= 70 && score < 80
+          ? "C"
+          : score >= 60 && score < 70
+          ? "D"
+          : "F";
+      console.log(`The score is ${score}, that's why the grade is ${grade}`);
+
+      // *****************************************************************
+      console.log(`****Practice Example 2****`);
+      /* Challenge 2: Discount Calculation
+      Write a program that calculates the discounted price of a product based on the following conditions:
+
+      If the quantity is greater than or equal to 10, apply a 10% discount.
+      If the quantity is less than 10, no discount is applied.
+      Input:
+      Quantity: 15
+      Price: $20
+
+      Output:
+      Total Price: $270 (after applying the 10% discount) */
+
+      const quantity = 15;
+      const price = 20;
+
+      const discountedPrice =
+        quantity >= 10
+          ? `Apply a 10% discount, and the discounted price is ${price * 0.1}`
+          : quantity < 10
+          ? "No Discount"
+          : "Norhing";
+      console.log(discountedPrice);
+      // *****************************************************************
+      console.log(`****Practice Example 3****`);
+
+      /* Write a program that takes the current hour as input (in 24-hour format) and displays a greeting based on the time of day:
+
+If the hour is between 6 and 11 (inclusive), display "Good morning".
+If the hour is between 12 and 17 (inclusive), display "Good afternoon".
+If the hour is between 18 and 21 (inclusive), display "Good evening".
+For all other hours, display "Good night".
+Input:
+Current Hour: 14
+
+Output:
+Good afternoon */
+
+      const currentHour = 24;
+
+      const greeting =
+        currentHour >= 6 && currentHour <= 11
+          ? "Good morning"
+          : currentHour >= 12 && currentHour <= 17
+          ? "Good Afternoon"
+          : currentHour >= 18 && currentHour <= 21
+          ? "Good Evening"
+          : currentHour >= 22 && currentHour <= 24
+          ? "Good Night"
+          : "Not valid Hour";
+
+      console.log(greeting);
+      // *****************************************************************
+      console.log(`****Practice Example 4****`);
+      // *****************************************************************
+      console.log(`****Practice Example 5****`);
+      // *****************************************************************
+      console.log(`****Practice Example 6****`);
+      // *****************************************************************
+      console.log(`****Practice Example 7****`);
+      // *****************************************************************
+      console.log(`****Practice Example 8****`);
+      // *****************************************************************
+      console.log(`****Practice Example 9****`);
+    </script>
+  </body>
+</html>

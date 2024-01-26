@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Functions</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+      a {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Functions</h1>
+    <br /><br />
+    <a href="../practice each topics/">Practice</a>
+    <a href="../projects/">Project</a>
+    <br /><br />
+    <a href="../index.html">Home</a>
+    <a href="../assignments.html">Assignments</a>
+
+    <script>
+      // *****************************************************************
+      console.log(`****Practice Example 1****`);
+      /* Challenge 1: Calculate the Area of a Rectangle
+            Write a function called calculateArea that takes in the length and width of a rectangle as parameters. The function should calculate and return the area of the rectangle.
+
+            Input:calculateArea(5, 8);
+            Output:The area of the rectangle is 40.*/
+
+      function calculateArea(length, width) {
+        return `The area of the rectangle is ${length * width}`;
+      }
+      const result = calculateArea(54, 45);
+      console.log(result);
+      // *****************************************************************
+      console.log(`****Practice Example 2****`);
+
+      /* Challenge 2: Convert Temperature Units
+      Write a function called convertTemperature that takes in a temperature value in Celsius and converts it to Fahrenheit. The function should return the converted temperature value.
+
+      Input: convertTemperature(25);
+      Output: 25 degrees Celsius is equal to 77 degrees Fahrenheit. */
+
+      const convertTemperature = function (temperature) {
+        return `${temperature} degrees Celcius is equal to ${
+          (temperature * 9) / 5 + 32
+        } degrees Farhnheit`;
+      };
+
+      console.log(convertTemperature(25));
+      console.log(convertTemperature(80));
+      console.log(convertTemperature(40));
+      console.log(convertTemperature(21));
+      // *****************************************************************
+      console.log(`****Practice Example 3****`);
+
+      /* Challenge 3: Check if a Number is Even
+      Write a function called isEven that takes in a number as a parameter and returns true if the number is even, and false if it is odd.
+
+      Input: isEven(10);
+      Output:true */
+
+      function isEven(number) {
+        if (number % 2 == 0) {
+          console.log(true);
+        } else {
+          console.log(false);
+        }
+      }
+      isEven(21);
+      isEven(20);
+      isEven(23);
+
+      // *****************************************************************
+      console.log(`****Practice Example 4****`);
+      /* CHALLENGE #1
+Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
+
+Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+
+A team only wins if it has at least double the average score of the other team. Otherwise, no team wins!
+
+
+
+Your tasks:
+
+Create an arrow function calcAverage to calculate the average of 3 scores. This function should have three parameters and return a single number (the average score).
+
+Create two new variables — scoreDolphins and scoreKoalas, and assign the value returned from the calcAverage function to them (you will need to call this function, and pass scores as arguments).
+
+Create a function checkWinner that takes the average score of each team as parameters (avgDolphins and avgKoalas), and then logs the winner to the console, together with the victory points, according to the rule above. Example: Koalas win (30 vs. 13) (use avgDolphins and avgKoalas instead of hard-coded values).
+
+Use the checkWinner function to determine the winner for both DATA 1 and DATA 2.  
+Ignore draws this time. Instead, log No team wins... to the console if there is no winner.
+TEST DATA 1: Dolphins scored 44, 23, and 71. Koalas scored 65, 54, and 49.
+TEST DATA 2: Dolphins scored 85, 54, and 41. Koalas scored 23, 34, and 27. */
+
+      const calcAverage = (score1, score2, score3) => {
+        return (score1 + score2 + score3) / 3;
+      };
+
+      const scoreDolphins = calcAverage(44, 23, 71);
+      const scoreKoalas = calcAverage(65, 54, 49);
+      const scoreDolphins2 = calcAverage(85, 54, 41);
+      const scoreKoalas2 = calcAverage(23, 34, 27);
+
+      const checkWinner = function (avgDolphins, avgKoalas) {
+        if (avgDolphins > avgKoalas) {
+          console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`);
+        } else if (avgKoalas > avgDolphins) {
+          console.log(`Koalas win (${avgKoalas} vs ${avgDolphins}`);
+        } else {
+          console.log("No team wins...");
+        }
+      };
+      console.log(checkWinner(scoreDolphins, scoreKoalas));
+      console.log(checkWinner(scoreDolphins2, scoreKoalas2));
+      // *****************************************************************
+      console.log(`****Practice Example 5****`);
+
+      /* Challenge: Calculate Grade
+Write a function called calculateGrade that takes a parameter score. The function should return the corresponding grade based on the following criteria:
+
+If the score is greater than or equal to 90, return "A".
+If the score is greater than or equal to 80, return "B".
+If the score is greater than or equal to 70, return "C".
+If the score is greater than or equal to 60, return "D".
+Otherwise, return "F".
+Example:
+Input: calculateGrade(85)
+Output: "B" */
+
+      const resultOfGrade = function (score) {
+        return score >= 90
+          ? "A"
+          : score >= 80
+          ? "B"
+          : score >= 70
+          ? "C"
+          : score >= 60
+          ? "D"
+          : "F";
+      };
+      const calculateGrade = (name) => {
+        const result = resultOfGrade();
+        console.log(`The Result of ${name} is ${result}`);
+      };
+      calculateGrade("sohail", 98);
+      calculateGrade("madiha", 85);
+      calculateGrade("jamil", 70);
+      calculateGrade("sohailll", 62);
+      calculateGrade("madihaa", 55);
+      // *****************************************************************
+      console.log(`****Practice Example 6****`);
+
+      /* Challenge: Check Leap Year
+Write a function called isLeapYear that takes a parameter year. The function should return true if the year is a leap year, and false otherwise. A leap year is a year that is divisible by 4 but not divisible by 100, except for years that are divisible by 400.
+
+Example:
+Input: isLeapYear(2020)
+Output: true */
+
+      const isLeapYear = (year) => {
+        return (0 == year % 4 && 0 != year % 100) || 0 == year % 400
+          ? true
+          : false;
+      };
+      console.log(isLeapYear(2022));
+      // *****************************************************************
+      console.log(`****Practice Example 7****`);
+      /* Challenge: Calculate Discount
+Write a function called calculateDiscount that takes two parameters: price and discountPercentage. The function should calculate and return the discounted price based on the given percentage.
+
+Example:
+Input: calculateDiscount(100, 20)
+Output: 80 */
+
+      const calculateDiscount = (price, discountPercentage) => {
+        return price - discountPercentage;
+      };
+      console.log(calculateDiscount(100, 20));
+      // *****************************************************************
+      console.log(`****Practice Example 8****`);
+      // *****************************************************************
+      console.log(`****Practice Example 9****`);
+    </script>
+  </body>
+</html>

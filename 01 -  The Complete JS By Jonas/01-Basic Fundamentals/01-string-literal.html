@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>String Literals</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to top left, #28b487, #7dd56f);
+        }
+        
+        h1 {
+            font-family: sans-serif;
+            font-size: 20px;
+            line-height: 1.3;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        a {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>String Literals</h1>
+    <br /><br />
+    <a href="../practice each topics/">Practice</a>
+    <a href="../projects/">Project</a>
+    <br /><br />
+    <a href="../index.html">Home</a>
+    <a href="../assignments.html">Assignments</a>
+
+    <script>
+        console.log(`****Practice Example 1****`);
+        /* 1. User Greeting
+                                           Write a program that takes the user's name as input and greets them using a string template literal.
+                                           For example: Input: Sohail Shaikh - Output: Hello, Sohail Shaikh! Welcome to our website. */
+
+        const name = "Sohail Shaikh";
+        console.log(
+            `Hello, ${name}! Welcome to our Website.You have learned Template Literals`
+        );
+
+        // *****************************************************************
+        console.log(`****Practice Example 2****`);
+        /* 2. Book Information:
+                                             Create a program that prompts the user for the title, author, and publication year of a book. Use string template literals to display the information in a formatted message. For example:
+                                               Input:
+                                               Title: The Great Gatsby
+                                               Author: F. Scott Fitzgerald
+                                               Publication Year: 1925
+
+                                               Output:
+                                               Book Information:
+                                               Title: The Great Gatsby
+                                               Author: F. Scott Fitzgerald
+                                               Publication Year: 1925 */
+
+        const bookTitle = "The Great Gatsby";
+        const bookAuthor = "F. Scott Fitzgerald";
+        const bookPublicationYear = 1925;
+        const currentYear = 2023;
+        let yearsSinceBookPublished;
+
+        console.log(`Title: ${bookTitle}
+                                       Author: ${bookAuthor}
+                                       Publication Year: ${bookPublicationYear}
+                                       Years Since Book Published: ${
+                                         currentYear - bookPublicationYear
+                                       }`);
+
+        // *****************************************************************
+        console.log(`****Practice Example 3****`);
+        /* 3. Shopping Cart Summary:
+                                           Implement a shopping cart summary program that calculates the total price of items in the cart and displays a summary message using string template literals. For example:
+                                           Input:
+                                           Item 1: Apples - $2.50
+                                           Item 2: Bananas - $1.75
+                                           Item 3: Oranges - $3.20
+
+                                           Output:
+                                           Shopping Cart Summary:
+                                           - Apples: $2.50
+                                           - Bananas: $1.75
+                                           - Oranges: $3.20
+                                           Total: $7.45 */
+
+        const apples = 2.5;
+        const bananas = 1.75;
+        const oranges = 3.2;
+        const summary = `Shopping Cart Summary:
+                                     - Apples : $${apples}
+                                     - Bananas : $${bananas}
+                                     - Oranges : $${oranges}
+                                     Total: $${apples + bananas + oranges}`;
+        console.log(summary);
+
+        // *****************************************************************
+        console.log(`****Practice Example 4****`);
+
+        /* 4. Weather Forecast:
+                                   Build a weather forecast program that displays the current temperature and weather condition. Use string template literals to generate the output. For example:
+                                     Input:
+                                       Temperature: 25°C
+                                       Weather Condition: Sunny
+
+                                       Output:
+                                       Today's Weather:
+                                       - Temperature: 25°C
+                                       - Condition: Sunny */
+
+        const currentTemperature = "25°C";
+        const weatherCondition = "Sunny";
+
+        console.log(`Today's Weather:
+                               - Temperature: ${currentTemperature}
+                               - Condition: ${weatherCondition}`);
+
+        // *****************************************************************
+        console.log(`****Practice Example 5****`);
+
+        /* Movie Recommendation:
+                         Write a program that recommends a movie to the user based on their preferred genre. Use string template literals to personalize the recommendation message. For example:
+                         Input: Genre: Action
+
+                         Output: We recommend the movie "The Dark Knight" for fans of action movies. Enjoy!*/
+
+        const preferredGenre = "Action";
+        const recommendedMovie = "The Dark Knight";
+        console.log(
+            `We recommend the movie "${recommendedMovie}" for fans of ${preferredGenre} movies. Enjoy!`
+        );
+
+        // *****************************************************************
+        console.log(`****Practice Example 6****`);
+
+        /* Email Template:
+                           Create a program that generates an email template for sending personalized emails to a list of recipients. Use string template literals to include the recipient's name and other relevant details in the email. For example:
+                           Input:
+                           Recipient Name: John
+                           Subject: Invitation
+
+                           Output:
+                           Dear John,
+
+                           You are cordially invited to our event. We look forward to seeing you there!
+
+                           Regards,
+                           Your Name
+                    */
+        const recipientName = "Sohail Shaikh";
+        const senderName = "Fine Touch Support";
+        const emailTemplate = `Dear ${recipientName}
+
+                     You are cordially invited to our event. We look forward to seeing you there!
+
+                     Regards,
+                     ${senderName}`;
+        console.log(emailTemplate);
+
+        // *****************************************************************
+        console.log(`****Practice Example 7****`);
+        /* Song Lyrics:
+                         Develop a program that takes the title and artist of a song and generates a formatted message displaying the song's lyrics. Use string template literals to include the song title and artist in the message. For example:
+                         Input:
+                         Title: "Bohemian Rhapsody"
+                         Artist: Queen
+
+                         Output:
+                         Song Lyrics: "Bohemian Rhapsody" by Queen
+
+                         Is this the real life?
+                         Is this just fantasy?
+                         Caught in a landslide...*/
+
+        const songTitle = "Bohemian Rhapsody";
+        const songArtist = "Queen";
+        const formattedMessage = `Song Lyrics: "${songTitle}" by ${songArtist}`;
+        const songLyrics = `
+                 Is this the real life?
+                 Is this just fantasy?
+                 Caught in a landslide...`;
+        console.log(`${formattedMessage}
+
+                  ${songLyrics}`);
+        // *****************************************************************
+        console.log(`****Practice Example 8****`);
+        /* Dynamic URL Generation:
+                    Write a program that generates dynamic URLs based on user input. Use string template literals to construct the URLs with variables such as the base URL and query parameters.
+                    Input:
+                      Base URL: "https://example.com"
+                      Endpoint: "/search"
+                      Query Parameters: {
+                        keyword: "javascript",
+                        page: 1,
+                        sort: "relevance"
+                      }
+
+                    Output:
+                      Generated URL: "https://example.com/search?keyword=javascript&page=1&sort=relevance"
+                */
+        const baseUrl = "https://example.com";
+        const endPoint = "/search";
+        const keyword = "javascript";
+        const page = 1;
+        const sort = "relevance";
+        const generatedUrl = `${baseUrl}${endPoint}&${keyword}`;
+        console.log(generatedUrl);
+        // *****************************************************************
+        console.log(`****Practice Example 9****`);
+
+        /* Social Media Post:
+          Build a program that generates a social media post based on user input. Use string template literals to include the post content and relevant details such as the author's name and timestamp. For example:
+          Input:
+          Post Content: "Just had an amazing hiking adventure!"
+          Author: John
+          Timestamp: June 10, 2023
+
+          Output:
+          John posted on June 10, 2023:
+          Just had an amazing hiking adventure!
+           */
+
+        const postContent = "Just had an amazing hiking adventure!";
+        const postAuthor = "Sohail";
+        const timeStamp = Date();
+
+        console.log(`${postAuthor} posted on ${timeStamp}:
+            ${postContent}`);
+        // *****************************************************************
+        console.log(`****Practice Example 10****`);
+
+        /* Invoice Generation:
+          Create a program that generates an invoice for a customer. Use string template literals to include details such as the customer's name, items purchased, quantities, and prices. Calculate the total amount and display it in the invoice. For example:
+          Input:
+          Customer Name: John
+          Items: [
+            { name: "Product A", quantity: 2, price: 10 },
+            { name: "Product B", quantity: 1, price: 15 },
+            { name: "Product C", quantity: 3, price: 5 }
+          ]
+
+          Output:
+          Invoice for John:
+
+          - Product A x 2: $20
+          - Product B x 1: $15
+          - Product C x 3: $15
+
+          Total: $50
+           */
+
+        const customerName = "Sohail";
+        const productAPrice = 10;
+        const productBPrice = 15;
+        const productCPrice = 5;
+        let itemQuantities;
+        let itemPrices;
+        let totalAmountA = productAPrice * 2;
+        let totalAmountB = productBPrice * 1;
+        let totalAmountC = productCPrice * 3;
+
+        console.log(`Invoice for ${customerName}
+      - Product A x 2: $${totalAmountA}
+      - Product B x 1: $${totalAmountB}
+      - Product C x 3: $${totalAmountC} `);
+    </script>
+</body>
+
+</html>

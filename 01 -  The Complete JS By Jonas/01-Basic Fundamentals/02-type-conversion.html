@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Type Conversion & Coercion</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to top left, #28b487, #7dd56f);
+        }
+        
+        h1 {
+            font-family: sans-serif;
+            font-size: 20px;
+            line-height: 1.3;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        a {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Type Conversion & Coercion</h1>
+    <br /><br />
+    <a href="../practice each topics/">Practice</a>
+    <a href="../projects/">Project</a>
+    <br /><br />
+    <a href="../index.html">Home</a>
+    <a href="../assignments.html">Assignments</a>
+
+    <script>
+        // *****************************************************************
+        console.log(`****Practice Example 1****`);
+        /* Temperature Conversion:
+              Implement a program that converts temperatures between Celsius and Fahrenheit. You can prompt the user to enter a temperature and its unit (Celsius or Fahrenheit), and then perform the conversion using appropriate type conversion or coercion techniques. */
+
+        const temperature = Number(prompt(`Enter The Temperature of the Room`));
+        const unit = prompt("Enter the Unit of Temperature (C or F)");
+        console.log(`The Temperature of the Room is ${temperature}°${unit}`);
+        console.log(typeof temperature);
+
+        // *****************************************************************
+        console.log(`****Practice Example 2****`);
+        /* Numeric Operations:
+              Create a calculator program that performs basic arithmetic operations. Prompt the user to enter two numbers and an operator (+, -, *, /). Use type conversion or coercion to ensure that the input values are treated as numbers and perform the desired  */
+
+        const inputFirstNum = Number(prompt(`Enter First Number`));
+        const inputSecondNum = Number(prompt(`Enter Second Number`));
+        const chooseCalculationOperator = prompt(`Enter Operator (+ , -, *, /)`);
+        let result;
+        if (chooseCalculationOperator === "+") {
+            result = inputFirstNum + inputSecondNum;
+            console.log(
+                `The Addition of ${inputFirstNum} and ${inputSecondNum} is ${Number(
+            result
+          )}`
+            );
+        } else if (chooseCalculationOperator === "-") {
+            result = inputFirstNum - inputSecondNum;
+            console.log(
+                `The Subtraction of ${inputFirstNum} and ${inputSecondNum} is ${Number(
+            result
+          )}`
+            );
+        } else if (chooseCalculationOperator === "*") {
+            result = inputFirstNum * inputSecondNum;
+            console.log(
+                `The Multiplication of ${inputFirstNum} and ${inputSecondNum} is ${Number(
+            result
+          )}`
+            );
+        } else if (chooseCalculationOperator === "/") {
+            result = inputFirstNum / inputSecondNum;
+            console.log(
+                `The Division of ${inputFirstNum} and ${inputSecondNum} is ${Number(
+            result
+          )}`
+            );
+        } else {
+            alert("Enter Correct Operators!");
+        }
+
+        // *****************************************************************
+        console.log(`****Practice Example 3****`);
+
+        /* Form Validation:
+              Build a form validation function that checks if the user has entered valid data in a form. For example, check if the age field is a number, if the email field is a valid email address, or if the password meets certain complexity requirements. Use appropriate type conversion or coercion techniques to validate the input data. */
+
+        /*  let age = prompt(`Enter the Age`);
+              age = Number(age);
+
+              console.log(`The Age is ${age} and The Type of Age is ${typeof age}`); */
+        // *****************************************************************
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Array</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+      a {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Array</h1>
+    <br /><br />
+    <a href="../index.html">Home</a>
+    <a href="../assignments.html">Assignments</a>
+
+    <script>
+      // *****************************************************************
+      console.log(`****Coding Challenges 1****`);
+
+      /* Challenge 1: Shopping Cart
+              Create a shopping cart program that allows users to add and remove items from their cart. Implement the following operations:
+
+              Add items to the cart using the push() method.
+              Remove the last item from the cart using the pop() method.
+              Display the current items in the cart using console.log(). */
+
+      //   function createShoppingCart() {
+      //     const cart = [];
+
+      //     function addItem(item) {
+      //       cart.push(item);
+      //     }
+
+      //     function removeItem() {
+      //       if (cart.length > 0) {
+      //         cart.pop();
+      //       }
+      //     }
+
+      //     function displayCart() {
+      //       console.log(`Current items in the cart:`);
+      //       for (const item of cart) {
+      //         console.log(item);
+      //       }
+      //     }
+
+      //     return { addItem, removeItem, displayCart };
+      //   }
+
+      //   // Create a shopping cart
+
+      //   const shoppingCart = createShoppingCart();
+
+      //   //   Add items to the cart
+      //   const addItemToCart = () => {
+      //     const item = prompt("Enter Item Name:");
+      //     shoppingCart.addItem(item);
+      //   };
+
+      //   //   Removes the item from the cart
+      //   const removeItemFromCart = () => {
+      //     shoppingCart.removeItem();
+      //   };
+
+      //   //   Displays the item in the cart
+      //   const displayItemInCart = () => {
+      //     shoppingCart.displayCart();
+      //   };
+
+      //   //   Main program loop
+      //   while (true) {
+      //     const choice = prompt(
+      //       `Choose an option:\n1. Add item to cart\n2. Remove last item from cart\n3. Display cart items\n4. Exit`
+      //     );
+
+      //     switch (choice) {
+      //       case "1":
+      //         addItemToCart();
+      //         break;
+      //       case "2":
+      //         removeItemFromCart();
+      //         break;
+      //       case "3":
+      //         displayItemInCart();
+      //       case "4":
+      //         console.log("Exiting....");
+      //         return;
+      //         break;
+      //       default:
+      //         console.log("Invalid Choice! Please try again");
+      //     }
+      //   }
+      const cart = [];
+
+      const addToCart = (item) => {
+        const addedItemToCart = cart.push("Banana", "Orange");
+        console.log(addedItemToCart);
+        return item;
+      };
+      console.log(addToCart(cart));
+
+      const removeFromCart = (item) => {
+        const removedItem = cart.pop();
+        return item;
+      };
+      console.log(removeFromCart(cart));
+      console.log(removeFromCart(cart));
+      // *****************************************************************
+      console.log(`****Coding Challenges 2****`);
+
+      /* Challenge 2: To-Do List
+      Create a to-do list program that allows users to manage their tasks. Implement the following operations:
+
+      Add tasks to the list using the push() method.
+      Remove the first task from the list using the shift() method.
+      Check if a specific task is already in the list using the includes() method. */
+
+      const todo = [];
+      function addTask(task) {
+        todo.push(task);
+        return todo;
+      }
+      // addTask(prompt("Enter 1st Todo"));
+      // addTask(prompt("Enter 2nd Todo"));
+      // addTask(prompt("Enter 3rd Todo"));
+      addTask("Learning Javascript");
+      addTask("Namaz");
+      addTask("Dinner");
+      console.log(todo);
+
+      function removeTask(task) {
+        todo.shift();
+        return todo;
+      }
+      console.log(removeTask());
+
+      function checkNamaz() {
+        if (todo.includes("Namaz")) {
+          console.log("Yes Namaz is in the task");
+        } else {
+          console.log("Add Namaz in Todo List");
+        }
+      }
+      checkNamaz();
+      console.log(cart.indexOf("Namaz"));
+      // *****************************************************************
+      console.log(`****Coding Challenges 3****`);
+      /* Challenge 6: Scoreboard
+Create a scoreboard program that keeps track of players and their scores. Implement the following operations:
+
+Add players and their scores to the scoreboard using the push() method.
+Remove the last player from the scoreboard using the pop() method.
+Display the top three players and their scores using the slice() method. */
+
+      const scoreboard = [];
+      function scoreBoard(players, score) {
+        scoreboard.push("Sohail", 45);
+        return scoreboard;
+      }
+      console.log(scoreBoard());
+      // *****************************************************************
+      console.log(`****Coding Challenges 4****`);
+      /* Write your code below. Good luck! 🙂 */
+
+      // const tip = bill>=50 && bill <= 300 ? bill * .15 : bill * .2;
+      // console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+      const calcTip = (billValue) => {
+        const tip =
+          billValue >= 50 && billValue <= 300
+            ? billValue * 0.15
+            : billValue * 0.2;
+        return tip;
+      };
+
+      const bills = [125, 555, 44];
+      const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+      console.log(tips);
+      console.log(bills);
+      const total = [
+        bills[0] + tips[0],
+        bills[1] + tips[1],
+        bills[2] + tips[2],
+      ];
+      console.log(total);
+      // *****************************************************************
+      console.log(`****Coding Challenges 5****`);
+      // *****************************************************************
+      console.log(`****Coding Challenges 6****`);
+      // *****************************************************************
+      console.log(`****Coding Challenges 7****`);
+      // *****************************************************************
+      console.log(`****Coding Challenges 8****`);
+      // *****************************************************************
+      console.log(`****Coding Challenges 9****`);
+    </script>
+  </body>
+</html>

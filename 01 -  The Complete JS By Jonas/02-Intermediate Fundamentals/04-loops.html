@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Loops</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to top left, #28b487, #7dd56f);
+        }
+        
+        h1 {
+            font-family: sans-serif;
+            font-size: 20px;
+            line-height: 1.3;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        a {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Loops</h1>
+    <br /><br />
+    <a href="../index.html">Home</a>
+    <a href="../assignments.html">Assignments</a>
+
+    <script>
+        // *****************************************************************
+        console.log(`****Coding Challenges 1****`);
+
+        /* Challenge:
+
+                                                                            You are given an array of temperatures in Celsius for a week. Your task is to convert each temperature to Fahrenheit using a conversion formula and store the converted temperatures in a new array.
+
+                                                                            Instructions:
+
+                                                                            Create an array called celsiusTemperatures containing the following test temperatures for a week: 25, 30, 22, 18, 27, 20, 24.
+
+                                                                            Create an empty array called fahrenheitTemperatures to store the converted temperatures.
+
+                                                                            Use a for loop to iterate over each temperature value in the celsiusTemperatures array.
+
+                                                                            Inside the loop, calculate the corresponding temperature in Fahrenheit using the formula: F = (C * 9/5) + 32, where C is the Celsius temperature.
+                                                                            Round the Fahrenheit temperature to the nearest whole number using the Math.round() function.
+                                                                            Store the converted Fahrenheit temperature in the fahrenheitTemperatures array using the push method.
+                                                                            After the loop, log the celsiusTemperatures and fahrenheitTemperatures arrays to the console.
+
+                                                                            Expected Output:
+
+                                                                            celsiusTemperatures: [25, 30, 22, 18, 27, 20, 24]
+                                                                            fahrenheitTemperatures: [77, 86, 71, 64, 81, 68, 75] */
+
+        const celsiusTemperatures = [25, 30, 22, 18, 27, 20, 24];
+        const fahrenheitTemperatures = [];
+
+        for (let i = 0; i < celsiusTemperatures.length; i++) {
+            const convertCtoF = (celsiusTemperatures[i] * 9) / 5 + 32;
+            fahrenheitTemperatures.push(convertCtoF);
+            console.log(convertCtoF);
+        }
+
+        console.log(`Celcius Temperature: ${celsiusTemperatures}`);
+        console.log(`Farheneit Temperature: ${fahrenheitTemperatures}`);
+        // *****************************************************************
+        console.log(`****Coding Challenges 2****`);
+
+        /* Challenge:
+
+                                                                            You have been given an array of student scores for a math test. Your task is to calculate and print the average score for the class.
+
+                                                                            Instructions:
+
+                                                                            Create an array called scores containing the following test scores for the students: 85, 92, 78, 90, 89, 94.
+
+                                                                            Create a variable called total and set it to 0. This variable will be used to accumulate the sum of all scores.
+
+                                                                            Use a for loop to iterate over each score in the scores array.
+
+                                                                            Inside the loop, add the current score to the total variable.
+                                                                            After the loop, calculate the average score by dividing the total by the number of scores (which is the length of the scores array).
+
+                                                                            Store the average score in a variable called average.
+                                                                            Print the average score to the console with an appropriate message.
+
+                                                                            Expected Output:
+
+                                                                            Average score: 88.0 */
+
+        const scores = [85, 92, 78, 90, 89, 94];
+
+        let total = 0;
+
+        for (let i = 0; i < scores.length; i++) {
+            total += scores[i];
+        }
+
+        const average = total / scores.length;
+        console.log(average);
+        // *****************************************************************
+        console.log(`****Coding Challenges 3****`);
+
+        /* Challenge:
+
+                                                                            You have been given an array of temperatures recorded over a week. Your task is to find and print the highest and lowest temperatures recorded during the week.
+
+                                                                            Instructions:
+
+                                                                            Create an array called temperatures containing the following temperatures: 28, 30, 32, 29, 31, 27, 26.
+
+                                                                            Create two variables called highest and lowest and set them to the first temperature in the array. These variables will be used to track the highest and lowest temperatures.
+
+                                                                            Use a for loop to iterate over each temperature in the temperatures array.
+
+                                                                            Inside the loop, compare the current temperature with the highest and lowest variables.
+                                                                            If the current temperature is higher than the highest temperature, update the highest variable.
+                                                                            If the current temperature is lower than the lowest temperature, update the lowest variable.
+                                                                            After the loop, print the highest and lowest temperatures with appropriate messages.
+
+                                                                            Expected Output:
+
+                                                                            Highest temperature: 32°C
+                                                                            Lowest temperature: 26°C */
+
+        const temperatures = [28, 30, 32, 29, 31, 27, 26];
+
+        let highest = temperatures[0];
+        let lowest = temperatures[0];
+
+        for (let i = 0; i < temperatures.length; i++) {
+            if (temperatures[i] > highest) {
+                highest = temperatures[i];
+            }
+
+            if (temperatures[i] < lowest) {
+                lowest = temperatures[i];
+            }
+        }
+        console.log(`Highest Temperature: ${highest}`);
+        console.log(`Lowest Temperature: ${lowest}`);
+        // *****************************************************************
+        console.log(`****Coding Challenges 4****`);
+
+        /* Challenge:
+
+                                                                            You have been given an array of student objects, each representing a student's name and their scores in three subjects (Math, Science, and English). Your task is to calculate the average score for each student and determine if they have passed or failed based on a passing score of 60.
+
+                                                                            Instructions:
+
+                                                                            Create an array called students containing the following student objects:
+
+                                                                            [
+                                                                              { name: 'John', math: 80, science: 75, english: 70 },
+                                                                              { name: 'Emily', math: 90, science: 85, english: 80 },
+                                                                              { name: 'David', math: 55, science: 60, english: 65 },
+                                                                              { name: 'Sarah', math: 70, science: 60, english: 75 },
+                                                                              { name: 'Michael', math: 60, science: 70, english: 80 }
+                                                                            ]
+                                                                            Use a for loop to iterate over each student object in the students array.
+
+                                                                            Inside the loop, calculate the average score for each student by adding up their math, science, and english scores and dividing the sum by 3.
+                                                                            Determine if the student has passed or failed by comparing their average score with a passing score of 60.
+                                                                            Print the student's name, average score, and their pass/fail status.
+
+                                                                            Expected Output:
+
+                                                                            John - Average Score: 75 - Passed
+                                                                            Emily - Average Score: 85 - Passed
+                                                                            David - Average Score: 60 - Passed
+                                                                            Sarah - Average Score: 68.33333333333333 - Passed
+                                                                            Michael - Average Score: 70 - Passed
+
+                                                                            This challenge simulates a scenario where you need to process student data and make calculations based on certain criteria. By using a for loop, you can iterate over the array of student objects and perform calculations for each student. This allows you to determine their average score and their pass/fail status. */
+
+        const students = [{
+            name: "John",
+            math: 80,
+            science: 75,
+            english: 70,
+        }, {
+            name: "Emily",
+            math: 90,
+            science: 85,
+            english: 80,
+        }, {
+            name: "David",
+            math: 55,
+            science: 60,
+            english: 65,
+        }, {
+            name: "Sarah",
+            math: 70,
+            science: 60,
+            english: 75,
+        }, {
+            name: "Michael",
+            math: 60,
+            science: 70,
+            english: 80,
+        }, ];
+
+        for (let i = 0; i < students.length; i++) {
+            const student = students[i];
+            const average = (student.math + student.science + student.english) / 3;
+
+            const passCheck = average >= 60 ? "Passed" : "Failed";
+            console.log(
+                `${student.name} - Average Score ${average} - ${passCheck}`
+            );
+        }
+        // *****************************************************************
+        console.log(`****Coding Challenges 5****`);
+
+        /* Challenge:
+
+                                                                      You have been given an array of numbers. Your task is to find the sum of all the even numbers in the array.
+
+                                                                      Instructions:
+                                                                      Create an array called numbers containing a list of numbers:
+                                                                      [2, 5, 8, 10, 13, 6, 4, 7, 9]
+
+                                                                      Create a variable called sum and set it to 0. This variable will store the sum of the even numbers.
+
+                                                                      Use a for loop to iterate over each number in the numbers array.
+
+                                                                      Inside the loop, check if the current number is even using the modulo operator (%).
+                                                                      If the number is even, add it to the sum variable.
+                                                                      After the loop finishes, print the value of the sum variable.
+
+                                                                      Expected Output:
+
+                                                                      30 */
+
+        const numbers = [2, 5, 8, 10, 13, 6, 4, 7, 9];
+
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            const number = numbers[i];
+
+            if (number % 2 == 0) {
+                sum += number;
+            }
+        }
+        console.log(sum);
+
+        // For Of
+        console.log("*****for of********");
+        for (let num of numbers) {
+            console.log(num);
+        }
+
+        // For in
+        console.log("*****for in********");
+        for (let num in numbers) {
+            console.log(numbers[num]);
+        }
+        // *****************************************************************
+        console.log(`****Coding Challenges 6****`);
+
+        /* Challenge:
+
+                                                                      You have been given an array of names. Your task is to create a new array that contains the lengths of each name in the original array.
+
+                                                                      Instructions:
+
+                                                                      Create an array called names containing a list of names:
+
+                                                                      ["John", "Alice", "Michael", "Sarah", "David"]
+                                                                      Create an empty array called nameLengths. This array will store the lengths of the names.
+
+                                                                      Use a for loop to iterate over each name in the names array.
+
+                                                                      Inside the loop, use the length property of each name to determine its length.
+                                                                      Add the length of each name to the nameLengths array using the push method.
+                                                                      After the loop finishes, print the nameLengths array.
+
+                                                                      Expected Output:
+
+                                                                      [4, 5, 7, 5, 5] */
+
+        const names = ["John", "Alice", "Michael", "Sarah", "David"];
+
+        const nameLengths = [];
+        for (let i = 0; i < names.length; i++) {
+            const name = names[i];
+            nameLengths.push(name.length);
+        }
+        console.log(`${nameLengths}`);
+
+        // For Of
+        console.log("*****for of********");
+        for (let name of names) {
+            console.log(name);
+        }
+
+        // For in
+        console.log("*****for in********");
+        for (let name in names) {
+            console.log(`it returns index ${name}`);
+            console.log(`it returns Array Value - ${names[name]}`);
+            console.log(`it returns Array - ${names}`);
+        }
+
+        // *****************************************************************
+        console.log(`****Coding Challenges 7****`);
+
+        /* You are given an array of strings. Your task is to count the number of vowels in each string and return an array with the vowel counts.
+
+                                                                Instructions:
+
+                                                                Create an array called words containing a list of strings:
+                                                                ["apple", "banana", "orange", "grapefruit"]
+                                                                Create an empty array called vowelCounts to store the counts of vowels in each string.
+
+                                                                Use a for loop to iterate over each string in the words array.
+
+                                                                Inside the loop, initialize a variable called count and set it to 0. This variable will store the count of vowels in the current string.
+                                                                Use another nested for loop to iterate over each character in the current string.
+                                                                Inside the nested loop, check if the current character is a vowel (e.g., 'a', 'e', 'i', 'o', 'u') by using the includes() method.
+                                                                If the character is a vowel, increment the count variable by 1.
+                                                                After the nested loop finishes, push the value of the count variable to the vowelCounts array.
+
+                                                                After the outer loop finishes, print the vowelCounts array.
+
+                                                                Expected Output:
+
+                                                                [2, 3, 3, 4] */
+
+        const words = ["apple", "banana", "orange", "grapefruit"];
+        const vowelCounts = [];
+
+        for (let i = 0; i < words.length; i++) {
+            const word = words[i];
+            let count = 0;
+
+            for (let j = 0; j < word.length; j++) {
+                const character = word[j].toLowerCase();
+
+                if (
+                    character.includes("a") ||
+                    character.includes("e") ||
+                    character.includes("i") ||
+                    character.includes("o") ||
+                    character.includes("u")
+                ) {
+                    count++;
+                }
+            }
+
+            vowelCounts.push(count);
+        }
+
+        console.log(vowelCounts);
+        // *****************************************************************
+        console.log(`****Coding Challenges 8****`);
+
+        /* Challenge:
+
+                                                          You are given an array of numbers. Your task is to calculate the sum of the even numbers and the sum of the odd numbers in the array separately.
+
+                                                          Instructions:
+
+                                                          Create an array called numbers containing a list of numbers:
+
+                                                          [10, 7, 3, 14, 8, 21, 16, 9, 5, 12]
+
+                                                          Create two variables called evenSum and oddSum and set them to 0. These variables will store the sums of even and odd numbers, respectively.
+
+                                                          Use a for loop to iterate over each number in the numbers array.
+
+                                                          Inside the loop, use the modulus operator % to check if the current number is even or odd.
+                                                          If the number is even (i.e., the remainder of dividing it by 2 is 0), add it to the evenSum variable.
+                                                          If the number is odd, add it to the oddSum variable.
+                                                          After the loop finishes, print the values of evenSum and oddSum separately.
+
+                                                          Expected Output:
+
+                                                          Even Sum: 60
+                                                          Odd Sum: 45 */
+
+        const numberss = [10, 7, 3, 14, 8, 21, 16, 9, 5, 12];
+
+        let evenSum = 0;
+        let oddSum = 0;
+
+        for (let i = 0; i < numberss.length; i++) {
+            const number = numberss[i];
+
+            if (number % 2 == 0) {
+                evenSum += number;
+                console.log(evenSum);
+            } else if (number % 2 != 0) {
+                oddSum += number;
+            }
+        }
+
+        console.log(`Even Sum: ${evenSum}
+      Odd Sum: ${oddSum}`);
+        // *****************************************************************
+        console.log(`****Coding Challenges 9****`);
+    </script>
+</body>
+
+</html>
