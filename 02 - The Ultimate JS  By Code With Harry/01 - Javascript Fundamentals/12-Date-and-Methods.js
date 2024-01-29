@@ -4,6 +4,31 @@
 const date = new Date()
 console.log(date) // current date and time
 
+/* Date Conversion */
+// To String
+console.log(date.toString()) // Mon Jan 29 2024 15:02:22 GMT+0000 (Coordinated Universal Time)
+
+
+// To ISO String
+console.log(date.toISOString()) // 2024-01-29T15:03:50.722Z
+
+// To Local Date String
+console.log(date.toLocaleDateString()) // 1/29/2024
+
+// To Local Time String
+console.log(date.toLocaleTimeString()) // 3:06:27 PM
+
+// To Locale String
+console.log(date.toLocaleString()) // 1/29/2024, 3:03:50 PM
+
+// To JSON
+console.log(date.toJSON()) // 2024-01-29T15:05:14.694Z
+
+
+
+
+
+
 // 2 - new Date(date string) creates a date object from a date string:
 const dateString = new Date('2023-08-28')
 console.log(dateString) // 2023-08-28T00:00:00.000Z
