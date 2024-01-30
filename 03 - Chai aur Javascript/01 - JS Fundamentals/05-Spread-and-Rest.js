@@ -55,3 +55,28 @@ const obj3 = {...obj1, ...obj2}
 console.log(obj3)
 
 
+/* // REST */
+
+/* REST Theory -> 
+  -> It looks like spread, but it's not!
+  -> Collects all remaining arguments into an actual array
+*/
+
+const printNums = (nums) => {
+  return nums
+}
+
+console.log(printNums(20))
+console.log(printNums(30,45,65)) // here only 1st value will print
+console.log(printNums([30,45,65])) // we have to declare the array but it's not better solution\
+
+// Solution? Use Rest(...) Operator 
+/* Syntax : 
+        function f(a, b, ...theArgs) {
+          // …
+        }  
+*/
+const printNums1 = (...nums) => {
+  return nums
+}
+console.log(printNums1(12,65,78))
