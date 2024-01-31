@@ -149,4 +149,21 @@ console.log(square(2)) // 4
 
 
 
-/* Functions are Objects */
+/* One Interesting Concept about function, Difference between declaration and expression */
+
+
+// 1st Function -> Function Declaration
+
+printHelloInDeclaration() // here, the function can called before declaration...
+function printHelloInDeclaration() {
+  console.log('Helloooooooooooooooooooo Declaration');
+}
+printHelloInDeclaration() // obviously calling
+
+
+// 2nd Function -> FUnction Expression
+
+// printHelloInExpression() // error-> cannot access before initialization
+const printHelloInExpression = function(){
+  console.log('Helloooooooooo Expression')
+}
