@@ -48,9 +48,10 @@ console.log(filteredHeros);
 
 /* Example 2 - Given an array of numbers, write a function that uses the filter method to return a new array containing only the even numbers.  */
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const filteredEven = numbers.filter((num) => {
+const filteredEven = numbers2.filter((num) => {
+
   return num % 2 == 0;
 });
 
@@ -91,13 +92,13 @@ console.log(greaterThanThreshold);
 /* Example 5 - Given an array of objects representing students, write a function that filters the students who have passed a specific subject. Each student object has a name and a grades property, which is an object where the keys are subjects and the values are the corresponding grades.
  */
 
-const studentList = [
+const studentList1 = [
   { name: "Alice", grades: { math: 90, science: 85, istory: 95 } },
   { name: "Bob", grades: { math: 75, science: 80, history: 88 } },
   { name: "Charlie", grades: { math: 92, science: 88, history: 75 } },
 ];
 
-const passedStudents = studentList.filter( (student) => {
+const passedStudents = studentList1.filter( (student) => {
   return student.grades.math > 80
 })
 console.log(passedStudents)
@@ -121,7 +122,7 @@ console.log(highlyRatedMovies)
 
 /* Example 7 - Given an array of objects representing products, write a function that filters the products based on their price range. */
 
-const products = [
+const products1 = [
   { name: "Laptop", price: 1200 },
   { name: "Smartphone", price: 600 },
   { name: "Headphones", price: 100 },
@@ -129,12 +130,12 @@ const products = [
 ];
 
 const filteredProductsByPrice = (products, minPrice, maxPrice) => {
-  return products.filter( (product) => {
+  return products1.filter( (product) => {
     return product.price >= minPrice && product.price <= maxPrice
   })
 } 
 
-const affordableProducts = filteredProductsByPrice(products, 100, 800);
+const affordableProducts = filteredProductsByPrice(products1, 100, 800);
 console.log(affordableProducts);
 
 
@@ -190,21 +191,21 @@ console.log(chainingMap)
 
 /* Question 1 - Given an array of numbers, write a function that uses the map method to create a new array where each number is squared. */
 
-const numbers = [1, 2, 3, 4, 5];
+const numbers1 = [1, 2, 3, 4, 5];
 
 const squareNum = (number) => {
   return number.map( (num) => {
     return num ** num
   })
 }
-const squaredNums = squareNum(numbers)
+const squaredNums = squareNum(numbers1)
 console.log(squaredNums)
 
 // ---------------------------------------
 
 /* Question 2 - Write a function that takes an array of strings and uses the map method to create a new array where each string is converted to uppercase. */
 
-const fruits = ['orange', 'mango', 'papaya', 'apple', 'banana', 'grapes']
+const fruits1 = ['orange', 'mango', 'papaya', 'apple', 'banana', 'grapes']
 
 const uppercaseFruits = (fruits) => {
   return fruits.map( (fruit) => {
@@ -212,13 +213,13 @@ const uppercaseFruits = (fruits) => {
   })
 }
 
-const upperCasedFruits = uppercaseFruits(fruits)
+const upperCasedFruits = uppercaseFruits(fruits1)
 console.log(upperCasedFruits)
 
 // ---------------------------------------
 /* Question 3 - Given an array of objects representing books, write a function that uses the map method to create a new array of book titles. */
 
-const library = [
+const library2 = [
   { title: "The Catcher in the Rye", genre: "Fiction" },
   { title: "To Kill a Mockingbird", genre: "Fiction" },
   { title: "The Great Gatsby", genre: "Fiction" },
@@ -227,12 +228,12 @@ const library = [
 ];
 
 const extractBookTitles = (books) => {
-  return library.map( (book) => {
+  return library2.map( (book) => {
     return book.title
   })
 }
 
-const bookTitles = extractBookTitles(library)
+const bookTitles = extractBookTitles(library2)
 console.log(bookTitles)
 
 // ---------------------------------------
@@ -253,26 +254,26 @@ console.log(convertToFahrenheit(celciusTemperatures))
 
 /* Question 5 - Given an array of strings, write a function that uses the map method to create a new array where each string is reversed. */
 
-const words = ["apple", "banana", "kiwi", "orange", "grape"];
+const words1 = ["apple", "banana", "kiwi", "orange", "grape"];
 
 const reverseStrings = (words) => {
-  return words.map( (word) => word.split('').reverse().join())
+  return words1.map( (word) => word.split('').reverse().join())
 }
 
-console.log(reverseStrings(words))
+console.log(reverseStrings(words1))
 
 
 // ----------------------------------------
 
 /* Question 6 - Write a function that takes an array of numbers and uses the map method to create a new array where each number is incremented by a specified value. */
 
-const originalNumbers = [1, 2, 3, 4, 5];
+const originalNumbers1 = [1, 2, 3, 4, 5];
 
 const incrementNumbers = (numbers, incrementValue) => {
   return numbers.map( (num) => num + incrementValue )
 }
 
-const incrementedNumbers = incrementNumbers(originalNumbers, 10)
+const incrementedNumbers = incrementNumbers(originalNumbers1, 10)
 console.log(incrementedNumbers)
 
 
