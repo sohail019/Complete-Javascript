@@ -151,3 +151,88 @@ for (const key in countries) {
 
 
 /* NOTE:: Object mein loop lagana rahega to for in loop laga lenge, arrays ke upar lagana rahega to for of loop laga lenge, arrays ke liye or bhi loops hai! but ek interesting hai jo sabse zyaada use hogi, 2 loops hai ek map or ek forEach */
+
+/* forEach Loop Method 
+ ---> The forEach() method of Array instances executes a provided function once for each array element.
+
+
+*/
+
+// NOTE: sabse zyada jo array mein kaam me lenge wo for loop nahi lenge but forEach lenge because ye directly property mein add kar di gayi hai
+
+
+const animals = ['dog', 'cat', 'monkey', 'elephant', 'cow']
+
+
+// Higher order function
+// callback lagta h jo bolta h function dedo
+
+// animals.forEach( function name() {}) --> Ye Default function declaration hota hai
+
+/* Keypoints to remember for callback function in higher order funcs: 
+        --> pehle to callback mein function ka naam nahi hoga
+        --> function ke baad parameters () jo dete the kyunki array pe lagaya hai to ye loop itna smart hai ke har values pe iterate hoga
+        --> har value ko bolna kya chahte ho? jo mann karey boliye!! (EG: a, item, i, value, etc)
+        --> Automatically, har baar ye function execute hoga or har baar is value ko lekar aaega as a parameter apne andar
+        
+*/
+
+// With function keyword
+animals.forEach( function (animal) {
+  console.log(`Function Keyword :: ${animal}`)
+})
+
+// From Arrow function
+animals.forEach( (animal) => {
+  console.log(`Arrow Function :: ${animal}`)
+})
+
+// Let's make more interesting
+function printMe(item) {
+  console.log(item)
+}
+// ek function banae hai printMe or uske andar jo bhi value denge wo print kar dega,  but kya ye function ko pass on kar sakte hai?? bilkul!
+
+// animals.forEach(printMe()) // ye galat tareeqa hai, reference dena execute nahi karna hai!!
+
+animals.forEach(printMe) // works perfect
+
+// Another interesting!!
+
+// NOTE: forEach hamesha item parameter nhi lekar aata h, iske paas or bhi chiz h jo return hoti h.. 3 aate hai (item, index, full array list)
+
+animals.forEach( (item, index, arr) => {
+  console.log(item, index, arr)
+})
+
+// But, start mein smjha tha ke array hota hai usme kaafi objects hote hai.. ye scenario forEach mein kaafi use hota hai
+
+const myAnimals = [
+  {
+    animalName: 'dog',
+    animalAge: 6
+  },
+  {
+    animalName: 'cat',
+    animalAge: 3
+  },
+  {
+    animalName: 'elephant',
+    animalAge: 10
+  },
+  
+]
+
+// NOTE: iske upar iteration bohot common operation hai because database se jo value aati hai wo array ke format mein aati hai aur har ek value ek object hi hota hai
+
+myAnimals.forEach( (item) => {
+  console.log(item) // objects aaajegi
+})
+
+myAnimals.forEach( (item) => {
+  console.log(item.animalName) // Animal name print hoga
+})
+
+myAnimals.forEach( (item) => {
+  console.log(item.animalAge) // Animal Afe print hoga
+})
