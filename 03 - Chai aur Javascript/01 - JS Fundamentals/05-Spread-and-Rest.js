@@ -32,6 +32,7 @@ console.log(nums1)
 console.log(nums2)
 
 
+
 /*  Spread in Object Literal */
 
 // Copies properties from one object into another object
