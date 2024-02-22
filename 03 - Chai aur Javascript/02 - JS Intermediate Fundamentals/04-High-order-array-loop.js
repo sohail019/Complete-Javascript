@@ -95,3 +95,59 @@ for (const value of myObject) {
 /* for (const [key, value] of myObject){
   console.log(key, value) // again, it gives an error of:: TypeError:obj1 is not iterable
 } */
+
+
+// Here comes, for in loop
+
+/* FOR IN */
+const languages = {
+  js: 'Javascript',
+  py: 'Python',
+  cpp: 'C++',
+  rb: 'Ruby'
+}
+console.log(languages)
+
+// Print key only
+for (const key in languages) {
+  console.log(`Key:: ${key}`) // works perfectly but print only key(js,py,cpp,rb)
+}
+
+// Print value
+for(const value in languages) {
+  console.log(`Value:: ${languages[value]}`) // print values only (Javascript, Python, C++, Ruby)
+}
+
+// Print both key and value together
+for(const key in languages) {
+  console.log(`Language name is ${languages[key]} and it's extension is ${key}`) 
+}
+
+
+/* Now, let's try for in loop in array */
+
+const programming = ['js', 'py', 'rb', 'cpp', 'java']
+
+for (const key in programming) {
+  console.log(`Key:: ${key}`) // it works but it returns index key from an array (0,1,2,3,4)
+}
+
+// ? But value kaise nikaale?
+for (const value in programming) {
+  console.log(`Value:: ${programming[value]}`) // ye print karega value ko
+}
+
+// Now let's try for in loop in Map!!!
+
+// const countries = new Map()
+
+// countries.set('IN', 'India')
+// countries.set('PK', 'Pakistan')
+// countries.set('SL', 'Sri Lanka')
+
+for (const key in countries) {
+  console.log(key) // kuch bhi print nahi hoga, error bhi nahi aaega. because map iterable nahi hai 
+}
+
+
+/* NOTE:: Object mein loop lagana rahega to for in loop laga lenge, arrays ke upar lagana rahega to for of loop laga lenge, arrays ke liye or bhi loops hai! but ek interesting hai jo sabse zyaada use hogi, 2 loops hai ek map or ek forEach */
