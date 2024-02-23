@@ -1,0 +1,16 @@
+--> What is DOM?
+    ---> The DOM is a JS representation of a webpage
+    ---> It's your JS 'window' into to the contents of a webpage
+    ---> It's just a bunch of objects that you can interact with via JS
+
+--> HTML + CSS Go In........... JS Object Comes Out
+
+
+--> What is Document?
+    --> The Document object is our entry point into the world of the DOM.
+    --> It contains representations of all the conent on a page, plus tons of useful methods and properties.
+
+
+Excalidraw Link
+
+https://excalidraw.com/#json=_LXcymWt5opYBlgPEpXT2,VhxGXu_Oq_yjxAajXW3-Nw--
