@@ -1,0 +1,13 @@
+--> What is Document?
+    --> The Document object is our entry point into the world of the DOM.
+    --> It contains representations of all the conent on a page, plus tons of useful methods and properties.
+
+
+--> Selecting -
+    --> getElementById
+    --> getElementsByClassName
+    --> getElementsByTagName
+
+// Query Selector --> A newer, all in one method to select a single element.
+
+// Query Selector All - Same idea, but returns a collection of matching elements
