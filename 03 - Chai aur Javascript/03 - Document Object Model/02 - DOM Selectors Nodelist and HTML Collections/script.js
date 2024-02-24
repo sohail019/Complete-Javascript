@@ -60,3 +60,26 @@ console.log(title.innerText) // DOM Manipulation by Sohail Shaikh
 console.log(document.getElementsByClassName('heading')) // HTML Collection Milega
 
 //---------------------------------------------------------
+
+/* Query Selector */
+console.log('************Query Selector*********************')
+
+// querySelector - A newer, all in one method to select a single element
+
+console.log(document.querySelector('h2')) // html file mein multiple h2 element hai but jo first wala hai wo return karega
+
+console.log(document.querySelector('#title')) // finds first element with ID of title
+
+console.log(document.querySelector('.heading')) // finds first element with class of heading
+console.log(document.querySelector('input[type="email"]')) // input attribute se element return
+
+// mujhe unordered list ki 1st list ka color change krna h
+
+const myUl = document.querySelector('ul')
+console.log(myUl)
+
+const firstLi = myUl.querySelector('li')
+console.log(firstLi)
+firstLi.style.backgroundColor = 'green'
+firstLi.style.padding = '10px'
+firstLi.innerText = 'Goat' // Cow se Goat hojaega
