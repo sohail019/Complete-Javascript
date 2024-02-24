@@ -111,3 +111,35 @@ myH1[0].style.color = 'black'
 myLiList.forEach( (l) => {
   l.style.textTransform = 'uppercase'
 })
+
+
+// --------------------------------------------------------
+
+/* HTML Collection */
+
+/* Again, get back to getElementByClassName */
+console.log(document.getElementsByClassName('item')) // it will return HTML Collection, different hota hai NodeList se
+
+// Loop lagana hai, forEach laga kr dekhte h
+
+const tempClassList = document.getElementsByClassName('item')
+
+// tempClassList.forEach( (li) => {
+//   console.log(li)
+// }) // Error : tempClassList.forEach is not a function
+
+
+
+// Solution? COnvert karna padega HTML Collection ko Array mein (Array.from() method se)
+
+const convertedArray = Array.from(tempClassList) // Converted to Array
+
+console.log(convertedArray)
+// Now we can apply forEach Method
+convertedArray.forEach( (li) => {
+  console.log(li) // teeno element print honge
+})
+
+convertedArray.forEach( (li) => {
+  li.style.color = 'orange'
+})
