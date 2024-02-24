@@ -11,6 +11,19 @@
     --> It contains representations of all the conent on a page, plus tons of useful methods and properties.
 
 
-Excalidraw Link
+--> Nodes in DOM Tree:
+    --> A node in a DOM tree is the intersection of two branches containing data.
+    --> Node can represent HTML elements, text, attributes, etc.
+    --> The root node is the top-most node of the tree.
+    --> The illustration shows the representation of a DOM containing different types of nodes
 
+Excalidraw Link
 https://excalidraw.com/#json=_LXcymWt5opYBlgPEpXT2,VhxGXu_Oq_yjxAajXW3-Nw--
+
+
+--> HTML DOM :
+    --> The DOM is an interface b/w scripting languages and a web page's structure.
+    --> The browser creates a DOM for each webpage it renders.
+    --> The DOM allows scripting language to access and modify a web page.
+    --> With the help of DOM, Javascript has the ability to create dynamic HTML
+
