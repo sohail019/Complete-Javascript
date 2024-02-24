@@ -83,3 +83,31 @@ console.log(firstLi)
 firstLi.style.backgroundColor = 'green'
 firstLi.style.padding = '10px'
 firstLi.innerText = 'Goat' // Cow se Goat hojaega
+
+/* querySelectorAll - Same idea, but returns a collection of matching elements  */
+
+console.log(document.querySelectorAll('h2')) // NodeList return karega 
+console.log(document.querySelectorAll('li')) // saare li return honge
+
+// NodeList and HTML collection jo h wo pure array nahi hai.. pehle console mein jaakr prototype check kariye.. because saare methods array ke available nahi hai!! For eg: forEach avaiable hai but map available nahi h
+
+const myLiList = document.querySelectorAll('li')
+console.log(myLiList) // NodeList hai
+
+// myLiList.style.backgroundColor = 'red' // Error : cannot set properties of undefined (setting 'backgroundColor')  
+
+// Solution --> Apply bracket notation!!
+myLiList[1].style.backgroundColor = 'red'
+
+
+// Common Mistakes?
+const myH1 = document.querySelectorAll('h1')
+console.log(myH1)
+// myH1.style.color = 'green' // ye nahi chalega.. yahan pe bhi batana padega konsa element
+myH1[0].style.color = 'black'
+
+
+// forEach
+myLiList.forEach( (l) => {
+  l.style.textTransform = 'uppercase'
+})
