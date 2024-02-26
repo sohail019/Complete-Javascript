@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to create NodeList Programmatically</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+</body>
+
+  <!-- Saari value element JS se inject karenge  -->
+  <script>
+    
+    // Create Element Method
+    const div = document.createElement('div')
+    console.log(div) // <div></div>
+
+    // Add Properties for attributes in Div element
+
+    // Class name add krna h div mein
+    div.className = 'main' // <div class='main'></div>
+    div.id = 'myId' // <div class='main' id='myId'></div>
+
+    div.id = Math.floor(Math.random() * 10 + 1)
+
+    // Custom attribute kaise set karey? setAttribute() method se
+
+    div.setAttribute('title', 'generated title') 
+
+    // Styling add
+    div.style.backgroundColor = 'green'
+    div.style.padding = '12px'
+
+    div.innerText = 'Create Nodelist Programmatically' //  ye innerText property overwrite krti hai previous value ko isliye method use krna better hoga
+
+    const addText = document.createTextNode('Create Nodelist')
+    div.appendChild(addText)
+
+    // okay, ye sab bana liye but page pe visible kyun nahi horaha?? because ham ne div create kiya jo ke memory ke andar hai! page pe nahi aaya.. page pe attaching karna padega!!
+ 
+    document.body.appendChild(div) // child append krne se hojaega!
+    
+  </script>
+</html>
