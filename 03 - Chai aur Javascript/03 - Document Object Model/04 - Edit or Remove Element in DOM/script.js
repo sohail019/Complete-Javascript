@@ -71,3 +71,13 @@ const newli = document.createElement('li')
 newli.textContent = 'Javascript'
 fourthLang.replaceWith(newli) // this is optimized way
 
+
+// ***********************************************
+
+/* // How to remove Element */
+
+// let's add english language then remove it
+addLangWithOpti('English')
+
+const lastLangEng = document.querySelector('li:last-child')
+lastLangEng.remove()
