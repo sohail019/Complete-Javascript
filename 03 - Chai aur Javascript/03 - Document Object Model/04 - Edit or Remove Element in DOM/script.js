@@ -20,3 +20,16 @@ addLanguage('Java')
 addLanguage('Typescript')
 
 // Iska issue hai.. because already ul mein 1 value thi to chal gaya!! orr 1 hi value ke baad ham appendChild() karke element ko select krte h to saara ka saara tree traverse krna padhta h document ke andar!! 1 tha to chal gaya kaam ek hazaar ya 1 lakh hota to problem hoti! kyunki end mein jaana chah rahe h or sabko traverse krte hue jaarahe h! optimization issue hoga!! to optimize krenge
+
+/* 2nd Approach -> Optimized with appendChild */
+
+const addLangWithOpti = (langName) => {
+
+  // create element first
+  const li = document.createElement('li')
+
+  li.appendChild(document.createTextNode(langName))
+
+  document.querySelector('.languages').appendChild(li)
+}
+addLangWithOpti('c++')
