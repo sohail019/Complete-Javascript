@@ -15,6 +15,7 @@ for(let i = 0; i < parent.children.length; i++) {
 
 parent.children[1].style.color = 'orange'
 
+/* Traversing */
 
 // PARENT TO CHILD
 console.log('*********PARENT TO CHILD************')
@@ -53,4 +54,8 @@ console.log(parent.childNodes.length) // 11!! but element to 4 h?
    .
   11 : yahan tak 
 */
-    
+
+
+/* // How to create nodeList programmatically */
+
+// visit create-nodelist.html file
