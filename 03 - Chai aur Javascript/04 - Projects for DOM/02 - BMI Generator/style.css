@@ -1,0 +1,64 @@
+.canvas {
+  height: 90vh;
+  background-color: #212121;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 150px;
+  height: 25px;
+  border-radius: 20px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #212121;
+  color: white;
+  border-radius: 25px;
+}
+
+button:hover{
+  background-color: white;
+  color: #212121;
+}
+
+#results {
+  font-size: 22px;
+  margin-left: 90px;
+  margin-top: 20px;
+  color: white
+}
+
+#weight-guide {
+  margin-left: 75px;
+  margin-top: 25px;
+  border: 1px solid white;
+  padding: 1.5rem
+}
+
+#weight-guide h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
