@@ -1,0 +1,116 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 00;
+  box-sizing: border-box;
+  font-family: 'Lobster', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(15, 200, 204, 1) 0%, rgba(17, 100, 102, 1) 100%);
+  /* background: linear-gradient(170deg, rgba(23,206,210,1) 0%, rgba(17,100,102,1) 100%); */
+}
+
+.container {
+  border: 2px solid white;
+  width: 40%;
+  min-width: 450px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+
+#newTask {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+#newTask input {
+  width: 70%;
+  height: 40px;
+  font-family: 'Lobster', sans-serif;
+  font-size: 15px;
+  border: 2px solid #bdbdbd;
+  padding: 20px;
+  font-weight: 700;
+  position: relative;
+  color: black;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+
+#newTask input:focus {
+  outline: none;
+  border-color: #116466;
+}
+
+#newTask button {
+  position: relative;
+  float: right;
+  width: 20%;
+  height: 40px;
+  font-family: 'Lobster', sans-serif;
+  border-radius: 5px;
+  background-color: #116466;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#tasks {
+  background-color: white;
+  padding: 30px 40px;
+  margin-top: 70px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: relative;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 4px 0;
+  border-bottom: 1px solid #212121;
+  list-style: none;
+}
+
+.task li {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.delete {
+  border: none;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+#deleteAll {
+  display: block;
+  margin: 10px auto;
+  width: 20%;
+  height: 40px;
+  font-family: 'Lobster', sans-serif;
+  border-radius: 5px;
+  background-color: #116466;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
