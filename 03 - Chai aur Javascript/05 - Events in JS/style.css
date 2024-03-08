@@ -1,0 +1,17 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: #212121;
+  color: white
+}
+
+img{
+  width: 200px
+}
+
+ul {
+  border: 2px solid white
+}
