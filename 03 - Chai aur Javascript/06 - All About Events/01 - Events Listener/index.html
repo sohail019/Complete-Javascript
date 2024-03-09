@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listeners</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../style.css">
+  <script src="./script.js"></script>
+</head>
+
+<body>
+  <nav>
+    <a href="/" aria-current="page">Home</a>
+    <a
+      href="https://github.com/sohail019/Complete-Javascript/tree/main/03%20-%20Chai%20aur%20Javascript/04%20-%20Projects%20for%20DOM">Github</a>
+  </nav>
+  <!-- 1st -> Inline JS ham HTML mein likh sakte hai!! for eg h1 mein onclick event lagae to pure h1 mein kahi bhi click karenge, ye event occur hoga! but ye sahi approach nahi hai isliye comment karte hai -->
+  <h1 onclick="alert('Inline JS Happens!')">1 - Inline JS in HTML, Click here</h1>
+  <hr>
+  <!-- 2nd -> JS mein function bana kar yahan html mein inject kar sakte hai!! -->
+  <h1 onclick="sayHello()">2 - JS Function injected in HTML for Event, Click Here</h1>
+  <hr>
+  <!--  3rd -> selector se select kar ke javasscript mein dot notation laga ke use krskte hai -->
+  <h1 id="third">3 - JS Selector with Dot Notation</h1>
+  <hr>
+  <!--  4th - > Add Event Listener Method-->
+  <h1 id="mainHeading">4 - Adding Event Listener</h1>
+  <div class="container">
+    <div class="card addCard" title="Add New Card">+</div>
+  </div>
+
+</body>
+
+
+</html>
