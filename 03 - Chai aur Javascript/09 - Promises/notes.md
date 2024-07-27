@@ -60,6 +60,7 @@ step1(() => {
   }) 
 })
 ```
+<!-- --------------------------------------------------------- -->
 
 ## Promises
 
@@ -82,6 +83,7 @@ let myPromise = new Promise(function(resolve, reject){
     }
 });
 ```
+<!-- --------------------------------------------------------- -->
 
 ## Promise Kaise Kaam Karte Hai?
 - Jab bhi ham Promise create karte hai, wo **'resolve'** aur **'reject'** functions ko pass karta hai.
@@ -111,3 +113,150 @@ myPromiseOne.then((message) => {
 - **reject()**: Jab asynchronous operation fail hota hai, ye call hota hai.
 - **then()**: Ye method successful result ko handle karta hai.
 - **catch()**: Ye method error ko handle karta hai.
+
+<!-- --------------------------------------------------------- -->
+## Chaining Promises
+Promises ko chain karna possible hai, jo complex asynchronous operation ko simple aur structured banata hai
+
+```javascript
+function step1(){
+    return new Promise((resolve, reject) => {
+        setTimeout( () => {
+            console.log("Step 1 Complete")
+            resolve("Data from Step 1")
+        }, 1000)
+    }) 
+}
+
+function step2(data){
+    return new Promise((resolve, reject) => {
+        setTimeout( () => {
+            console.log("Step 2 Complete", data)
+            resolve("Data from Step 2")
+        }, 1000)
+    }) 
+}
+
+function step3(data){
+    return new Promise((resolve, reject) => {
+        setTimeout( () => {
+            console.log("Step 3 Complete", data)
+            resolve("Data from Step 3")
+        }, 1000)
+    }) 
+}
+
+
+step1()
+    .then((result1) => step2(result1))
+    .then((result2) => step3(result2))
+    .then((result3) => {
+        console.log("All steps complete with", result3)
+    })
+    .catch((error) => {
+        console.log("An Error Occured: ", error)
+    })
+
+// Explaination
+// Har step mke baad promise ka result agle step ko pass kiya jaata hai
+// chain mein koi bhi promise fail hone par 'catch()' block ko execute kiya jaata h
+```
+
+# Promise Methods
+
+## Promise.all
+**Promise.all** method ek array leta hai promises ka aur tabhi resolve hota hai jab saare promises resolve hojaate hai, Agar koi ek promise reject hota hai, to Promise.all immediately reject hojaata hai
+
+```javascript
+// Promise.all
+
+let promiseOne = new Promise( (resolve, reject) => {
+    setTimeout( () => {
+        console.log('Promise 1 Completed');
+        resolve("Data from Promise 1")
+
+    }, 1000)
+})
+
+let promiseTwo = new Promise( (resolve, reject) => {
+    setTimeout(() => {
+        console.log("Promise 2 Completed")
+        resolve("Data from Promise 2")
+    }, 2000);
+} )
+
+let promiseThree = new Promise( (resolve, reject) => {
+    setTimeout(() => {
+        console.log("Promise 3 Completed");
+        resolve("Data from Promise 3")
+    }, 3000);
+})
+
+// Promise.all ek array return karta hai jo saare promises ke result ko contain karta hai
+Promise.all([promiseOne, promiseTwo, promiseThree])
+    .then( (results) => console.log("All Promises Resolved: ", results))
+    .catch( (err) => console.log("An Error Occured: ", err))
+```
+
+## Promise.race
+**Promise.race** method array leta hai Promises ka aur us promise ke result ko return karta hai jo sabse pehle resolve ya reject hojaata hai.
+
+```javascript
+let promiseOne = new Promise( (resolve, reject) => {
+
+    setTimeout(() => {
+        console.log("Promise 1 Completed")
+        resolve("Data from Promise 1")
+    }, 2000);
+})
+
+let promiseTwo = new Promise( (resolve, reject) => {
+
+    setTimeout(() => {
+        console.log("Promise 2 Completed")
+        resolve("Data from Promise 2")
+    }, 1000);
+} )
+
+
+Promise.race([promiseOne, promiseTwo])
+    .then( (results) => {
+        console.log("Fastest Promise resolved with: ", results)
+    })
+    .catch( (error) => {
+        console.log("Fastest Promise Rejected with: ", error);
+    })
+```
+
+## Promise.allSettled
+- **Promise.allSettled** method ek array leta hai promises ka aur resolve karta hai jab saare promises settle(resolve ya reject) ho jaate hai
+- ye saare promises ke outcomes ko ek array mein return karta hai
+
+```javascript
+let promiseOne = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Data from promise 1');
+    }, 1000);
+});
+
+let promiseTwo = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject('Error from promise 2');
+    }, 2000);
+});
+
+
+Promise.allSettled([promiseOne, promiseTwo])
+    .then( (results ) => {
+        results.forEach( (result) => {
+            // status property ya to fulfilled hogi ya rejected
+            if(result.status === "fulfilled") {
+                // value: Agar promise fulfilled hota hai to ye uski resolved value ko hold krta hai
+                console.log("Fullfilled with:" , result.value)
+            } else{
+                // reason: Agar promise reject hota hai to ye uska error ya rejection reason hold karta hai
+                console.log("Rejected with:", result.reason);
+            }
+        })
+    })
+```
