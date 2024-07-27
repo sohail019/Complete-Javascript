@@ -3,18 +3,18 @@
 
 // Fetching JSON data
 
-// fetch('https://jsonplaceholder.typicode.com/posts/1')
-//     .then(response => response.json())
-//     .then(data => console.log("JSON Data:", data))
-//     .catch(error => console.error("Error: ", error))
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => response.json())
+    .then(data => console.log("JSON Data:", data))
+    .catch(error => console.error("Error: ", error))
 
 
-// // Fetching Text Data
+// Fetching Text Data
 
-// fetch('https://api.github.com/users/sohail019')
-//     .then(response => response.text())
-//     .then(data => console.log("Text Data: ", data))
-//     .catch(error => console.error("Error: ", error))
+fetch('https://api.github.com/users/sohail019')
+    .then(response => response.text())
+    .then(data => console.log("Text Data: ", data))
+    .catch(error => console.error("Error: ", error))
 
 
 // Fetching binary data (blob)
